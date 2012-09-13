@@ -9,6 +9,7 @@ _ReSharper.*
 *.DS_Store
 [Tt]humbs.db
 
+*.suo
 *.user
 [Oo]bj
 [Bb]in
