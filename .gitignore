@@ -1,5 +1,14 @@
 StyleCop.Cache
+
+_ReSharper.*
+*.resharper
+
 *.sublime-project
 *.sublime-workspace
-obj
-bin
+
+*.DS_Store
+[Tt]humbs.db
+
+*.user
+[Oo]bj
+[Bb]in
