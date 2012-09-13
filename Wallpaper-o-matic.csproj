@@ -8,8 +8,8 @@
     <ProjectGuid>{E65892C6-0E7B-4ECD-8A6A-5F3DAE6AB2A1}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GeneratePicture</RootNamespace>
-    <AssemblyName>GeneratePicture</AssemblyName>
+    <RootNamespace>Wallpaperomatic</RootNamespace>
+    <AssemblyName>Wallpaper-o-matic</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
