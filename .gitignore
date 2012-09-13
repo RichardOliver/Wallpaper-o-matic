@@ -1,0 +1,5 @@
+StyleCop.Cache
+*.sublime-project
+*.sublime-workspace
+obj
+bin
