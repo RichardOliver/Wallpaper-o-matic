@@ -2,6 +2,7 @@ StyleCop.Cache
 
 _ReSharper.*
 *.resharper
+TestResults/
 
 *.sublime-project
 *.sublime-workspace

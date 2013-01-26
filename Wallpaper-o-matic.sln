@@ -1,18 +1,40 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wallpaper-o-matic", "./Source/Wallpaper-o-matic.csproj", "{E65892C6-0E7B-4ECD-8A6A-5F3DAE6AB2A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wallpaper-o-matic", "Source\Wallpaper-o-matic.csproj", "{E65892C6-0E7B-4ECD-8A6A-5F3DAE6AB2A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wallpaper-o-matic-Tests", "Tests\Wallpaper-o-matic-Tests\Wallpaper-o-matic-Tests.csproj", "{CEC7B349-4C34-4BB6-A27F-84CF4405DBEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E65892C6-0E7B-4ECD-8A6A-5F3DAE6AB2A1}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{E65892C6-0E7B-4ECD-8A6A-5F3DAE6AB2A1}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{E65892C6-0E7B-4ECD-8A6A-5F3DAE6AB2A1}.Debug|Mixed Platforms.Build.0 = Debug|x86
 		{E65892C6-0E7B-4ECD-8A6A-5F3DAE6AB2A1}.Debug|x86.ActiveCfg = Debug|x86
 		{E65892C6-0E7B-4ECD-8A6A-5F3DAE6AB2A1}.Debug|x86.Build.0 = Debug|x86
+		{E65892C6-0E7B-4ECD-8A6A-5F3DAE6AB2A1}.Release|Any CPU.ActiveCfg = Release|x86
+		{E65892C6-0E7B-4ECD-8A6A-5F3DAE6AB2A1}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{E65892C6-0E7B-4ECD-8A6A-5F3DAE6AB2A1}.Release|Mixed Platforms.Build.0 = Release|x86
 		{E65892C6-0E7B-4ECD-8A6A-5F3DAE6AB2A1}.Release|x86.ActiveCfg = Release|x86
 		{E65892C6-0E7B-4ECD-8A6A-5F3DAE6AB2A1}.Release|x86.Build.0 = Release|x86
+		{CEC7B349-4C34-4BB6-A27F-84CF4405DBEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEC7B349-4C34-4BB6-A27F-84CF4405DBEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEC7B349-4C34-4BB6-A27F-84CF4405DBEA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CEC7B349-4C34-4BB6-A27F-84CF4405DBEA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CEC7B349-4C34-4BB6-A27F-84CF4405DBEA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CEC7B349-4C34-4BB6-A27F-84CF4405DBEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEC7B349-4C34-4BB6-A27F-84CF4405DBEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEC7B349-4C34-4BB6-A27F-84CF4405DBEA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CEC7B349-4C34-4BB6-A27F-84CF4405DBEA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{CEC7B349-4C34-4BB6-A27F-84CF4405DBEA}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
