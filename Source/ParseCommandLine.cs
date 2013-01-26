@@ -9,7 +9,7 @@ namespace Wallpaperomatic
         private readonly Dictionary<string, List<string>> _arguments;
         public ParseCommandLine(string commandLine)
         {
-            const string pattern = "(/|-{1,2})(?<key>[^\\s:=]+)[\\s:=]+(\"(?<value>[^\"]*)\"|(?<value>[^\\s/-]*))";
+            const string pattern = "(/|-{1,2})(?<key>[^\\s:=]+)([\\s:=]+(\"(?<value>[^\"]*)\"|(?<value>[^\\s/-]*)))?";
             var matches = Regex.Matches(commandLine, pattern);
 
             _arguments = new Dictionary<string, List<string>>();

@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Windows;
 
 namespace Wallpaperomatic
@@ -7,7 +8,7 @@ namespace Wallpaperomatic
     {
         static void Main(string[] args)
         {
-            var commandLineArgs = new ParseCommandLine(System.Environment.CommandLine);
+            var commandLineArgs = new ParseCommandLine(Environment.CommandLine);
             if (commandLineArgs.ContainsKey("help") || commandLineArgs.ContainsKey("?"))
             {
                 ShowHelp();
@@ -33,25 +34,25 @@ namespace Wallpaperomatic
                 var outputFileName = Path.Combine(outputPath, fileName);
                 triangleGrid.Draw(outputFileName);               
             }
-
+            Console.ReadKey(true);
         }
 
         private static void ShowHelp()
         {
-            System.Console.WriteLine("Creates of images based on an iregular grid of triangles");
-            System.Console.WriteLine();
-            System.Console.WriteLine("{0} /output:pathForImages [[/textures:pathForTextures] [/colours:commaSeparatedListOfHexCodes]] [/rows:numberOfRowsInGrid] [/cols:numberOfColumnsInGrid] [/jigglex:HowMuchToVaryPositionsAlongXAxis] [/jiggley:HowMuchToVaryPositionsAlongXAxis] [/numberOfImages:numberOfImagesPerRun]", System.Diagnostics.Process.GetCurrentProcess().ProcessName);
-            System.Console.WriteLine();
-            System.Console.WriteLine("/output");
-            System.Console.WriteLine("/textures");
-            System.Console.WriteLine("/colours");
-            System.Console.WriteLine("/rows");
-            System.Console.WriteLine("/cols");
-            System.Console.WriteLine("/jigglex");
-            System.Console.WriteLine("/jiggley");
-            System.Console.WriteLine("/numberOfImages");
-            System.Console.WriteLine();
-            System.Console.WriteLine("Must specify an output folder");
+            Console.WriteLine("Creates of images based on an iregular grid of triangles");
+            Console.WriteLine();
+            Console.WriteLine("{0} /output:pathForImages [[/textures:pathForTextures] [/colours:commaSeparatedListOfHexCodes]] [/rows:numberOfRowsInGrid] [/cols:numberOfColumnsInGrid] [/jigglex:HowMuchToVaryPositionsAlongXAxis] [/jiggley:HowMuchToVaryPositionsAlongXAxis] [/numberOfImages:numberOfImagesPerRun]", System.Diagnostics.Process.GetCurrentProcess().ProcessName);
+            Console.WriteLine();
+            Console.WriteLine("/output");
+            Console.WriteLine("/textures");
+            Console.WriteLine("/colours");
+            Console.WriteLine("/rows");
+            Console.WriteLine("/cols");
+            Console.WriteLine("/jigglex");
+            Console.WriteLine("/jiggley");
+            Console.WriteLine("/numberOfImages");
+            Console.WriteLine();
+            Console.WriteLine("Must specify an output folder");
         }
     }
 }
