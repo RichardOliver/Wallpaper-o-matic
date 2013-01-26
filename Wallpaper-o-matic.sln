@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wallpaper-o-matic", "Wallpaper-o-matic.csproj", "{E65892C6-0E7B-4ECD-8A6A-5F3DAE6AB2A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wallpaper-o-matic", "./Source/Wallpaper-o-matic.csproj", "{E65892C6-0E7B-4ECD-8A6A-5F3DAE6AB2A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
