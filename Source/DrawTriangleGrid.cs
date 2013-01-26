@@ -132,7 +132,6 @@ namespace Wallpaperomatic
             }
         }
 
-
         public void PaintGrid(DrawingContext drawingContext)
         {
             for (var rowIdx = 1; rowIdx < _points.Length; rowIdx++)
@@ -190,6 +189,5 @@ namespace Wallpaperomatic
 
             drawingContext.DrawGeometry(brush, new Pen(brush, 0), streamGeometry);
         }
-
     }
 }

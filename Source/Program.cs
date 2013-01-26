@@ -9,7 +9,7 @@ namespace Wallpaperomatic
         static void Main(string[] args)
         {
             var commandLineArgs = new ParseCommandLine(Environment.CommandLine);
-            if (commandLineArgs.ContainsKey("help") || commandLineArgs.ContainsKey("?"))
+            if (commandLineArgs.ContainsKey("help") || commandLineArgs.ContainsKey("?") || !commandLineArgs.ContainsKey("output"))
             {
                 ShowHelp();
                 return;
@@ -34,7 +34,6 @@ namespace Wallpaperomatic
                 var outputFileName = Path.Combine(outputPath, fileName);
                 triangleGrid.Draw(outputFileName);               
             }
-            Console.ReadKey(true);
         }
 
         private static void ShowHelp()

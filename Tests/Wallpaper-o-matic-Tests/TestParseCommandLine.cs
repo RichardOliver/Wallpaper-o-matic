@@ -26,7 +26,6 @@ namespace Wallpaper_o_matic_Tests
             Assert.IsTrue(commandLineArgs.ContainsKey("Help"));
         }
 
-
         [TestMethod]
         public void ParseCommandLine_OneSlashStyleCommandLineOptionWithEqualsStyleArgument_ReturnsMatchingKeyAndValue()
         {
@@ -48,7 +47,6 @@ namespace Wallpaper_o_matic_Tests
             var expected = new List<string> {"value"};
             CollectionAssert.AreEquivalent(expected, actual);
         }
-
 
         [TestMethod]
         public void ParseCommandLine_TwoCommandLineOptionWithSameKeys_ReturnsMatchingKeyAndValues()
