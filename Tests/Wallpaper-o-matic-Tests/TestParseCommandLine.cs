@@ -8,6 +8,7 @@ namespace Wallpaper_o_matic_Tests
     [TestClass]
     public class TestParseCommandLine
     {
+        #region ParseCommandLine
         [TestMethod]
         public void ParseCommandLine_OneHypenStyleCommandLineOptionWithNoArguments_ReturnsMatchingKey()
         {
@@ -73,5 +74,40 @@ namespace Wallpaper_o_matic_Tests
             var expectedSecondKey = new List<string> { "value2" };
             CollectionAssert.AreEquivalent(expectedSecondKey, actualSecondKey);
         }
+        #endregion
+
+        #region GetFirstOrSubstitute
+        [TestMethod]
+        public void GetFirstOrSubstitute_KeyPresent_ReturnsArgument()
+        {
+            const string testCommandLine = @"c:\foo\ProgramName.exe /key=value";
+            var commandLineArgs = new ParseCommandLine(testCommandLine);
+
+            var actual = commandLineArgs.GetFirstOrSubstitute("Key", "FOO");
+            Assert.AreEqual("value", actual);
+        }
+
+        [TestMethod]
+        public void GetFirstOrSubstitute_KeyNotPresent_ReturnsSubstituteValue()
+        {
+            const string testCommandLine = @"c:\foo\ProgramName.exe /key=value";
+            var commandLineArgs = new ParseCommandLine(testCommandLine);
+
+            var actual = commandLineArgs.GetFirstOrSubstitute("NotAKey", "FOO");
+            Assert.AreEqual("FOO", actual);
+        }
+
+        [TestMethod]
+        public void GetFirstOrSubstitute_IlegalCastArgument_ReturnsSubstituteValue()
+        {
+            const string testCommandLine = @"c:\foo\ProgramName.exe /key=NotANumber";
+            var commandLineArgs = new ParseCommandLine(testCommandLine);
+
+            int actual = commandLineArgs.GetFirstOrSubstitute("key", 2);
+            Assert.AreEqual(2, actual);
+        }
+
+
+        #endregion
     }
 }

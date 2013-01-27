@@ -9,7 +9,7 @@ namespace Wallpaperomatic
         static void Main(string[] args)
         {
             var commandLineArgs = new ParseCommandLine(Environment.CommandLine);
-            if (commandLineArgs.ContainsKey("help") || commandLineArgs.ContainsKey("?") || !commandLineArgs.ContainsKey("output"))
+            if (TheHelpTextShouldBeShown(commandLineArgs))
             {
                 ShowHelp();
                 return;
@@ -36,9 +36,18 @@ namespace Wallpaperomatic
             }
         }
 
+        private static bool TheHelpTextShouldBeShown(ParseCommandLine commandLineArgs)
+        {
+            if (commandLineArgs.ContainsKey("help") || commandLineArgs.ContainsKey("?")) return true;
+            if (!commandLineArgs.ContainsKey("output")) return true;
+
+            var outputFolder = commandLineArgs["output"][0];
+            return !Directory.Exists(outputFolder);
+        }
+
         private static void ShowHelp()
         {
-            Console.WriteLine("Creates of images based on an iregular grid of triangles");
+            Console.WriteLine("Creates of images based on an irregular grid of triangles");
             Console.WriteLine();
             Console.WriteLine("{0} /output:pathForImages [[/textures:pathForTextures] [/colours:commaSeparatedListOfHexCodes]] [/rows:numberOfRowsInGrid] [/cols:numberOfColumnsInGrid] [/jigglex:HowMuchToVaryPositionsAlongXAxis] [/jiggley:HowMuchToVaryPositionsAlongXAxis] [/numberOfImages:numberOfImagesPerRun]", System.Diagnostics.Process.GetCurrentProcess().ProcessName);
             Console.WriteLine();
